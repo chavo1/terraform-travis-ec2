@@ -5,6 +5,6 @@ terraform.tfvars
 .kitchen
 .ruby-version
 id_rsa
-id_rsa_pub
+id_rsa.pub
 id_rsa.zip
 key
