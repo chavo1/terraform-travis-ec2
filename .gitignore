@@ -1,0 +1,10 @@
+terraform.tfstate/
+terraform.tfstate.d/
+.terraform
+terraform.tfvars
+.kitchen
+.ruby-version
+id_rsa
+id_rsa_pub
+id_rsa.zip
+key
