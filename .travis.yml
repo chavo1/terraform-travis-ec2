@@ -1,0 +1,21 @@
+language: ruby
+dist: xenial
+sudo: required
+cache:
+- apt
+addons:
+  apt:
+    packages:
+    - curl
+install:
+- curl -sL -o /tmp/terraform.zip https://releases.hashicorp.com/terraform/0.12.16/terraform_0.12.16_linux_amd64.zip
+- sudo unzip -d /usr/local/bin /tmp/terraform.zip
+- gem install bundler
+- bundle install
+script:
+- terraform fmt
+- terraform init
+- kitchen converge
+- kitchen verify
+- kitchen destroy
+before_install:
